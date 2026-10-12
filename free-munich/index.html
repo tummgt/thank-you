@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Free Munich for Students</title>
+<style>
+html{color-scheme:light}
+
+/* Layout: single phone-first column, sections as short lists with a price chip on the right of each entry */
+:root{
+  --bg:#f6f7f4; --surface:#ffffff; --fg:#1d2a2c; --muted:#5b6a6b; --line:#dfe4e0;
+  --accent:#0d6f78; --accent-soft:#e1f0ef; --chip:#fff3c4; --chip-fg:#5a4500;
+  --display:"Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
+  --body:"IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121a1b; --surface:#1a2425; --fg:#e8eeec; --muted:#9fb0ae; --line:#2b3839;
+  --accent:#5cc3c9; --accent-soft:#163236; --chip:#3d3410; --chip-fg:#f5df8a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121a1b; --surface:#1a2425; --fg:#e8eeec; --muted:#9fb0ae; --line:#2b3839;
+  --accent:#5cc3c9; --accent-soft:#163236; --chip:#3d3410; --chip-fg:#f5df8a; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:16px/1.55 var(--body);padding-inline:16px;padding-block:28px 48px}
+.wrap{max-width:680px;margin-inline:auto;display:grid;gap:36px}
+header{display:grid;gap:10px}
+.eyebrow{font:500 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+h1{font:800 clamp(34px,8vw,52px)/1.02 var(--display);letter-spacing:-.02em;margin:0;text-wrap:balance}
+.lede{margin:0;color:var(--muted);max-width:56ch}
+.note{font-size:14px;background:var(--accent-soft);border-radius:10px;padding:12px 14px;margin:0}
+section{display:grid;gap:12px}
+h2{font:600 22px/1.2 var(--display);margin:0;display:flex;align-items:baseline;gap:10px}
+h2 small{font:500 12px/1 var(--mono);color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+ul{list-style:none;margin:0;padding:0;background:var(--surface);border:1px solid var(--line);border-radius:14px}
+li{display:flex;flex-direction:column;padding:14px 16px}
+li>.chip{order:-1;align-self:flex-start;margin-bottom:6px}
+li+li{border-top:1px solid var(--line)}
+li>div{min-width:0}
+.name{font-weight:600}
+.name a{color:inherit;text-decoration-color:var(--accent);text-underline-offset:3px}
+.name a:hover{color:var(--accent)}
+.name a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+.desc{margin:2px 0 0;color:var(--muted);font-size:15px}
+.where{display:block;margin-top:4px;font:500 12.5px/1.4 var(--mono);color:var(--muted)}
+.chip{font:500 12px/1 var(--mono);background:var(--chip);color:var(--chip-fg);padding:6px 8px;border-radius:999px;white-space:nowrap}
+footer{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;display:grid;gap:6px}
+footer p{margin:0}
+@media print{
+  :root{--bg:#fff;--surface:#fff;--fg:#111;--muted:#444;--line:#ccc;--accent:#0d6f78;--accent-soft:#eef6f5;--chip:#fff3c4;--chip-fg:#5a4500;color-scheme:light}
+  body{padding:0;font-size:10.5pt;line-height:1.4}
+  .wrap{max-width:none;gap:14px}
+  h1{font-size:28pt} h2{font-size:14pt}
+  li{padding:7px 10px;break-inside:avoid} section{break-inside:avoid-page;gap:6px}
+  .desc{font-size:9.5pt} .where{font-size:8.5pt}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <span class="eyebrow">Your thank-you · Winter semester 2026/27</span>
+    <h1>Free Munich for Students</h1>
+    <p class="lede">Concerts, art, markets and good spots in Munich that cost nothing (or one euro). Thank you for taking part in our study.</p>
+    <p class="note">Information as of October 2026. Times and programmes change, so check the linked website before you go.</p>
+  </header>
+
+  <section>
+    <h2>Live music <small>3 tips</small></h2>
+    <ul>
+      <li><div><span class="name"><a href="https://hmtm.de/veranstaltungen/" target="_blank" rel="noopener">Concerts at the University of Music and Theatre (HMTM)</a></span>
+        <p class="desc">Students and professors perform almost every week, from orchestra to opera scenes. Most events have free admission; the calendar marks them “Eintritt frei”.</p>
+        <span class="where">Arcisstraße 12 · Gasteig HP8 · other venues</span></div><span class="chip">Mostly free</span></li>
+      <li><div><span class="name"><a href="https://milla-club.de/jazz-jam-29/" target="_blank" rel="noopener">JazzJam@Milla</a></span>
+        <p class="desc">Monthly jam session of the HMTM jazz department. Listen, or bring your instrument.</p>
+        <span class="where">Milla Live Club, Holzstraße 28 · Tuesdays, doors 20:00</span></div><span class="chip">Free</span></li>
+      <li><div><span class="name"><a href="https://www.muenchen.de/en/sights/munich-glockenspiel" target="_blank" rel="noopener">Glockenspiel at Marienplatz</a></span>
+        <p class="desc">The figures on the New Town Hall dance and joust for about 15 minutes.</p>
+        <span class="where">Marienplatz · daily 11:00 and 12:00</span></div><span class="chip">Free</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Art and museums <small>6 tips</small></h2>
+    <ul>
+      <li><div><span class="name"><a href="https://www.lothringer13.com/visit" target="_blank" rel="noopener">Lothringer 13 Halle</a></span>
+        <p class="desc">The city’s hall for contemporary art in Haidhausen, with changing exhibitions and events.</p>
+        <span class="where">Lothringer Straße 13</span></div><span class="chip">Free</span></li>
+      <li><div><span class="name"><a href="https://www.nsdoku.de" target="_blank" rel="noopener">NS-Documentation Centre</a></span>
+        <p class="desc">Munich’s history in the Nazi era, on the site of the former party headquarters.</p>
+        <span class="where">Max-Mannheimer-Platz 1</span></div><span class="chip">Free</span></li>
+      <li><div><span class="name"><a href="https://bspg.snsb.de" target="_blank" rel="noopener">Palaeontological Museum</a></span>
+        <p class="desc">Fossils and skeletons in a historic hall, a short walk from the Pinakotheken.</p>
+        <span class="where">Richard-Wagner-Straße 10</span></div><span class="chip">Free</span></li>
+      <li><div><span class="name"><a href="https://www.muenchen.de/en/sights/museums/free-museums-munich-here-you-have-free-admission" target="_blank" rel="noopener">Pinakotheken, Brandhorst and more on Sundays</a></span>
+        <p class="desc">Alte Pinakothek, Pinakothek der Moderne, Museum Brandhorst, Glyptothek, Egyptian Museum, Museum Five Continents and others.</p>
+        <span class="where">Kunstareal and city centre · every Sunday</span></div><span class="chip">€1</span></li>
+      <li><div><span class="name"><a href="https://www.lenbachhaus.de" target="_blank" rel="noopener">Lenbachhaus after work</a></span>
+        <p class="desc">The Blue Rider collection, free on the first Thursday of the month in the evening.</p>
+        <span class="where">Luisenstraße 33 · 1st Thursday, 18:00–22:00</span></div><span class="chip">Free</span></li>
+      <li><div><span class="name"><a href="https://www.hausderkunst.de" target="_blank" rel="noopener">Haus der Kunst</a> and <a href="https://www.villastuck.de" target="_blank" rel="noopener">Villa Stuck</a></span>
+        <p class="desc">Haus der Kunst is free on the last Friday of the month (16:00–22:00); Villa Stuck on the first Friday (18:00–22:00).</p>
+        <span class="where">Prinzregentenstraße 1 and 60</span></div><span class="chip">Free</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Markets and festivals <small>2 tips</small></h2>
+    <ul>
+      <li><div><span class="name"><a href="https://www.muenchen.de/en/events/auer-dult-2026" target="_blank" rel="noopener">Kirchweihdult</a></span>
+        <p class="desc">Munich’s traditional autumn fair with about 250 stalls: crockery, antiques, crafts and a few old-fashioned rides.</p>
+        <span class="where">Mariahilfplatz · 17–25 Oct 2026, 10:00–19:00</span></div><span class="chip">Free entry</span></li>
+      <li><div><span class="name"><a href="https://www.tollwood.de/en/tollwood-winterfestival/" target="_blank" rel="noopener">Tollwood Winter Festival</a></span>
+        <p class="desc">Winter festival with the “Market of Ideas”, live music and performances, open late into the evening. Over 90% of the cultural programme costs nothing.</p>
+        <span class="where">Theresienwiese · 24 Nov – 23 Dec 2026</span></div><span class="chip">Free entry</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Outdoors <small>4 tips</small></h2>
+    <ul>
+      <li><div><span class="name">Monopteros in the English Garden</span>
+        <p class="desc">Small temple on a hill with a view over the old town’s towers. Best in the late afternoon.</p>
+        <span class="where">Englischer Garten, southern part</span></div><span class="chip">Free</span></li>
+      <li><div><span class="name">Olympiaberg</span>
+        <p class="desc">A short climb with a view across the city and, on clear days with Föhn wind, to the Alps.</p>
+        <span class="where">Olympiapark · U3 Olympiazentrum</span></div><span class="chip">Free</span></li>
+      <li><div><span class="name">Sunset at the Isar</span>
+        <p class="desc">Sit on the gravel banks between Wittelsbacherbrücke and the Flaucher.</p>
+        <span class="where">Isarauen, Sendling / Thalkirchen</span></div><span class="chip">Free</span></li>
+      <li><div><span class="name">Nymphenburg Palace Park</span>
+        <p class="desc">Canals, swans and long avenues. The park itself costs nothing; only the palace buildings charge entry.</p>
+        <span class="where">Schloss Nymphenburg · Tram 17</span></div><span class="chip">Free</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>A place to read <small>1 tip</small></h2>
+    <ul>
+      <li><div><span class="name"><a href="https://www.bsb-muenchen.de/recherche-und-service/anmelden-ausleihen-bestellen/anmelden/" target="_blank" rel="noopener">Bavarian State Library</a></span>
+        <p class="desc">Register once for a free library card, then work in the reading rooms of one of Europe’s largest libraries. Look up at the grand staircase on your way in.</p>
+        <span class="where">Ludwigstraße 16 · U3/U6 Universität</span></div><span class="chip">Free card</span></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>A thank-you from the Chair of Sport and Health Management, Technical University of Munich.</p>
+    <p>Sources: muenchen.de and the venues’ own websites (October 2026). We are not affiliated with the venues listed.</p>
+  </footer>
+</div>
+
+</body>
+</html>
